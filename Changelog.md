@@ -17,11 +17,13 @@ Overall, the new concepts and practices I learned this week will significantly i
 
 * Now, there are two players, the PC and the human player.
 * The numbers range from 1 to 100.
+* If the player enters a decimal number, the program throws an error
 * The PC and the human player take turns in rounds.
 * With print() function, the player can see the number that PC obtained
 * There are some clues, if the number is too low or too high
 * The program displays the numbers suggested by both the player and the PC to guess the random number.
 * The program also shows the number of attempts taken by the PC or human player to guess the random number.
+
 
 ### Changed
 

@@ -7,6 +7,8 @@ import random
 
 user_name = input("Write your name: ")
 print("*"*10,"Welcome to the Guess the Number game", user_name,"!","*"*10)
+
+
 random_number = random.randint(1,100)
 lower_limit = 1
 higher_limit = 100
@@ -14,9 +16,7 @@ player_number = -1
 pc = -1
 pc_allnumbers = []
 player_allnumbers = []
-rounds = 0
-
-
+rounds = 0  
 while player_number != random_number and pc != random_number:
     try:
         rounds = rounds + 1
@@ -50,7 +50,6 @@ while player_number != random_number and pc != random_number:
                 print("Congratulations," + user_name + " won!")
                 print("All numbers from PC: ", pc_allnumbers)
                 print("All numbers from ", user_name,": ", player_allnumbers)
-
                 break
     except ValueError:
         print("Enter only integer numbers")
