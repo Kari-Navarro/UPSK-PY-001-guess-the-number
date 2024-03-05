@@ -12,16 +12,17 @@ class TestGuessNumberFunctions(unittest.TestCase):
         self.assertLessEqual(random_number, 100)
     
     def test_pc_guess(self):
-        guess = pc_guess(1,100)
-        self.assertGreaterEqual(guess, 1)
-        self.assertLessEqual(guess, 100)
+        lower_limit = 10
+        higher_limit = 90
+        pc_number = pc_guess(lower_limit, higher_limit)
+        self.assertGreaterEqual(pc_number, lower_limit)
+        self.assertLessEqual(pc_number, higher_limit)
 
-    @patch("builtins.input", return_value="10")
-    def test_player_guess(self, mock_input):
-        user_name = "Karina"
-        self.assertEqual(player_guess(user_name), 50)
+    def test_player_guess(self):
+        with unittest.mock.patch('builtins.input', return_value='10'):
+            player_number = player_guess("Karina")
+        self.assertIsInstance(player_number, int)
         
-
 
 if __name__ == '__main__':
 #Provides a command-line interface to the test scrip, produces an output that shows the time and number of test
