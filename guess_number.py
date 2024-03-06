@@ -37,9 +37,6 @@ from functions import pc_guess
 #        if play.lower() != "yes":
 #            print("Goodbye!")
 #            break 
-            
-            
-
 
 
 
@@ -64,13 +61,15 @@ def guess_number():
                 pc_all_numbers.append(pc)
                 print(f"PC: {pc}")
                 if pc == random_number:
-                    print("-----The winner is PC-----")
+                    print("******** The winner is PC ********")
                     break
                 elif pc < random_number:
                     print("Too low! Try again")
+                    print("--------------------------------------")
                     lower_limit  = pc + 1
                 else:
                     print("Too high! Try again")
+                    print("--------------------------------------")
                     higher_limit = pc - 1
 
                 player_number = player_guess(user_name)
@@ -80,10 +79,12 @@ def guess_number():
                     break
                 elif player_number < random_number:
                     print("Too low! Try again")
+                    print("--------------------------------------")
                     if player_number > lower_limit:
                         lower_limit = player_number + 1
                 else:
                     print("Too high! Try again")
+                    print("--------------------------------------")
                     if player_number < higher_limit:
                         higher_limit = player_number - 1
 
@@ -94,7 +95,7 @@ def guess_number():
         print("Attempts:", rounds)
 
 
-        play = input("Do yo want to play again)(yes/no): ")
+        play = input("Do you want to play again?(yes/no): ")
         if play.lower() != "yes":
             print("Goodbye!")
             break 
