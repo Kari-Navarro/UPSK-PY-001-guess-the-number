@@ -2,45 +2,6 @@ from functions import get_random_number
 from functions import player_guess
 from functions import pc_guess
 
-
-#def guess_number():
-#    while True:
-#        user_name = input("Write your name: ")
-#        print("*"*10,"Welcome to the Guess the Number game", user_name,"!","*"*10)
-#        print("In this game, you will play against your PC. The PC takes the first turn, and then you can guess. Good luck!")
-#        lower_limit = 1
-#        higher_limit = 100
-#        pc_all_numbers = []
-#        player_all_numbers = []
-#        rounds = 0
-#        boolean_user = False
-#        boolean_pc = False
-#        random_number = get_random_number()
-
-#        while not boolean_user and not boolean_pc:
-#            try: 
-#                rounds += 1
-         
-#                boolean_pc = pc_guess(random_number, boolean_pc, lower_limit, higher_limit)
-#                boolean_user, lower_limit, higher_limit = player_guess(random_number, boolean_user, lower_limit, higher_limit, user_name)
-#                pc_all_numbers.append(pc_number)
-#            except ValueError:
-#                print("Enter only integers numbers")
-
-                
-#        print("All numbers from PC: ", pc_all_numbers)
-#        print("All numbers from ", user_name,": ", player_all_numbers)
-#        print("Attempts:", rounds)
-
-
-#        play = input("Do yo want to play again)(yes/no): ")
-#        if play.lower() != "yes":
-#            print("Goodbye!")
-#            break 
-
-
-
-
 def guess_number():
     while True:
         user_name = input("Write your name: ")
